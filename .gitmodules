@@ -1,0 +1,3 @@
+[submodule "src/doom-ascii"]
+	path = src/doom-ascii
+	url = https://github.com/wojciech-graj/doom-ascii.git
