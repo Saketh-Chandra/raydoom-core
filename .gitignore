@@ -3,7 +3,9 @@
 # dependencies
 /node_modules
 
+# built files
+/dist
+*.tgz
 
 # misc
 .DS_Store
-dist

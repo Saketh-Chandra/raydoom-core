@@ -2,8 +2,8 @@
   "name": "raydoom-core",
   "version": "1.0.0",
   "description": "DOOM Shareware compiled to WebAssembly for Node.js (RayDoom core engine)",
-  "main": "dist/loader.js",
-  "types": "dist/types.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "GPL-2.0",
   "keywords": [
     "doom",
@@ -13,7 +13,10 @@
     "retro"
   ],
   "files": [
-    "dist",
+    "dist/**/*.js",
+    "dist/**/*.wasm",
+    "dist/**/*.data",
+    "dist/**/*.d.ts",
     "NOTICE.md"
   ],
   "scripts": {

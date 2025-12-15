@@ -35,7 +35,7 @@ echo "✅ Using emcc: $(which emcc)"
 if [ ! -d "$PROJECT_ROOT/src/doom-ascii" ]; then
   echo "❌ Error: doom-ascii source not found at $PROJECT_ROOT/src/doom-ascii"
   echo "Please add doom-ascii as a git submodule:"
-  echo "  git submodule add https://github.com/wojciech-graj/doom-ascii.git src/doom-ascii"
+  echo "  git submodule add https://github.com/Saketh-Chandra/doom-ascii-wasm.git src/doom-ascii"
   exit 1
 fi
 
@@ -51,12 +51,11 @@ cd ../..
 mkdir -p dist
 cp src/doom-ascii/_wasm/obj/doom.js dist/
 cp src/doom-ascii/_wasm/obj/doom.wasm dist/
-cp src/doom-ascii/_wasm/obj/doom.data dist/
 
 # Show file sizes
 echo "✅ Build complete!"
 echo ""
 echo "📊 Artifact sizes:"
-ls -lh dist/doom.{js,wasm,data} | awk '{print "  " $9 ": " $5}'
+ls -lh dist/doom.{js,wasm} | awk '{print "  " $9 ": " $5}'
 echo ""
 echo "📦 Total size: $(du -sh dist | awk '{print $1}')"

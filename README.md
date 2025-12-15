@@ -22,6 +22,13 @@ npm pack
 
 Note: The build script expects `emsdk` to be located at `../emsdk` relative to this repository root. Adjust `scripts/build-wasm.sh` if your `emsdk` is installed elsewhere.
 
+### WASM Source
+This package uses a [custom fork of doom-ascii](https://github.com/Saketh-Chandra/doom-ascii-wasm) with WASM-specific modifications for Raycast integration, including:
+- Additional exported runtime functions for state access
+- Player status exports (health, armor, ammo, weapons)
+- Dynamic WAD file loading support
+- Raycast-specific input handling
+
 ## Usage
 Install from npm (after publishing) or with a local `.tgz`:
 
