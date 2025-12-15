@@ -1,0 +1,40 @@
+{
+  "name": "raydoom-core",
+  "version": "1.0.0",
+  "description": "DOOM Shareware compiled to WebAssembly for Node.js (RayDoom core engine)",
+  "main": "dist/loader.js",
+  "types": "dist/types.d.ts",
+  "license": "GPL-2.0",
+  "keywords": [
+    "doom",
+    "wasm",
+    "ascii",
+    "game",
+    "retro"
+  ],
+  "files": [
+    "dist",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "build": "sh scripts/build-wasm.sh && tsc",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist && mkdir dist"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  },
+  "author": "Saketh Chandra",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/raydoom-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/raydoom-core/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/raydoom-core#readme"
+}
