@@ -15,9 +15,5 @@ Licensed under GNU GPL v2.0
 Copyright (C) 2025 Saketh Chandra
 Licensed under GNU GPL v2.0
 
-## DOOM Shareware Data (doom1.wad)
-DOOM is a trademark of id Software, Inc.
-Shareware data is freely distributable.
-
 ## Third-Party Dependencies
 This package uses Emscripten for WebAssembly compilation.

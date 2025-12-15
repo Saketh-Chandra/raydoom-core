@@ -3,7 +3,7 @@
 raydoom-core is the GPLv2-licensed core package that provides the DOOM ASCII engine compiled to WebAssembly. It's intended to be published on npm and consumed by the RayDoom Raycast extension (which is MIT-licensed).
 
 ## Contents
-- `dist/doom.wasm`, `dist/doom.js`, `dist/doom.data` — compiled WASM artifacts
+- `dist/doom.wasm`, `dist/doom.js` — compiled WASM artifacts
 - `dist/loader.js` — helper to load the WASM engine in Node.js
 - `dist/types.d.ts` — TypeScript typings for the loader and engine
 
