@@ -80,6 +80,9 @@ export interface DoomModule extends EmscriptenModule {
   _WASM_GetPlayerItems: () => number;
   _WASM_GetPlayerSecrets: () => number;
   
+  // Game loop control
+  _WASM_StopGameLoop?: () => void;
+  
   ccall: (
     ident: string,
     returnType: string | null,
