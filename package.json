@@ -1,6 +1,6 @@
 {
   "name": "raydoom-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DOOM Shareware compiled to WebAssembly for Node.js (RayDoom core engine)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
