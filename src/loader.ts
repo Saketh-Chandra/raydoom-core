@@ -23,7 +23,8 @@ export async function loadDoomEngine(config?: {
   const doomModulePath = path.join(assetsPath, "doom.js");
   
   // Dynamic import of the Doom module (CommonJS module from Emscripten)
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // Using require for CommonJS compatibility with Emscripten output
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const DoomModuleFactory = require(doomModulePath) as (
     config: Partial<DoomModule>
   ) => Promise<DoomModule>;

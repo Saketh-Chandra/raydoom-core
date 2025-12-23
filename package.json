@@ -23,14 +23,19 @@
   "scripts": {
     "build": "sh scripts/build-wasm.sh && tsc",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf dist && mkdir dist"
+    "clean": "rm -rf dist && mkdir dist",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@types/node": "^22.0.0",
-    "typescript": "^5.9.3"
+    "eslint": "^9.22.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.24.0"
   },
   "author": "Saketh Chandra",
   "repository": {
