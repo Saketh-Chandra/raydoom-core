@@ -26,7 +26,7 @@ jobs:
       - name: Build DOOM WASM
         env:
           EMSDK_PATH: ${{ env.EMSDK }}
-        run: sh scripts/build-wasm.sh
+        run: bash scripts/build-wasm.sh
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
