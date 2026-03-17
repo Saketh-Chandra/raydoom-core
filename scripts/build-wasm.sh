@@ -6,7 +6,7 @@ echo "🎮 Building DOOM WASM..."
 # Get absolute path to project root
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
-EMSDK_PATH="$( cd "$PROJECT_ROOT/../../emsdk" && pwd )"
+EMSDK_PATH="${EMSDK_PATH:-$( cd "$PROJECT_ROOT/../../emsdk" && pwd )}"
 
 # Check if emsdk is available
 if [ ! -d "$EMSDK_PATH" ]; then
