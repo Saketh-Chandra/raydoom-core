@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "sh scripts/build-wasm.sh && tsc",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npx tsc",
     "clean": "rm -rf dist && mkdir dist",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix"

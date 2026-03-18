@@ -6,6 +6,7 @@
 
 import { DoomModule } from "./types";
 import * as path from "path";
+import { createRequire } from "module";
 
 /**
  * Load the DOOM WASM module
@@ -23,9 +24,11 @@ export async function loadDoomEngine(config?: {
   const doomModulePath = path.join(assetsPath, "doom.js");
   
   // Dynamic import of the Doom module (CommonJS module from Emscripten)
-  // Using require for CommonJS compatibility with Emscripten output
+  // Use createRequire to get a native Node.js require that bypasses esbuild's
+  // bundled module resolver, allowing runtime loading from arbitrary file paths.
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const DoomModuleFactory = require(doomModulePath) as (
+  const nativeRequire = createRequire(__filename);
+  const DoomModuleFactory = nativeRequire(doomModulePath) as (
     config: Partial<DoomModule>
   ) => Promise<DoomModule>;
 
